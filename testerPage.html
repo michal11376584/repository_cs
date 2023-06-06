@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona</title>
+</head>
+<body>
+    <h1>Lista:</h1>
+    <p id="textbox"></p>
+
+    <script>
+        const textbox = document.getElementById("textbox");
+        let clientsArray = [];
+
+        let request = new XMLHttpRequest();
+        request.open("GET", "https://localhost:7102/Hurtownia/GetClientsAsync", true);
+        request.onreadystatechange = function() {
+            console.log(`ReadyState: ${this.readyState} | Status: ${this.status}.`);
+            if(this.readyState == 4 && this.status == 200) {
+                textbox.innerHTML = "";
+                let response = JSON.parse(request.responseText);
+                if(response.serverInfo.status == "Success"){
+                    clientsArray = response.serverResponse;
+                    textbox.innerHTML += "<ol>";
+                    clientsArray.forEach((v) => {
+                        textbox.innerHTML += `<li>${v.imie}, ${v.nazwisko}</li>`;
+                    })
+                    textbox.innerHTML += "</ol>";
+                }else{
+                    textbox.innerHTML = `Wystąpił bład po stronie zewnętrzenego serwera: <i><b>${response.serverInfo.errorDescription}</b></i>`;
+                }
+            }else if(this.readyState == 4 && this.status == 0){
+                textbox.innerHTML = `Zewnętrzny serwer nie odpowiada.`;
+            }
+        }
+        textbox.innerHTML = "Wyczytywanie...";
+        request.send();
+    </script>
+</body>
+</html>
