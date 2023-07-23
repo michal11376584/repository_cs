@@ -2613,11 +2613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repoCS\\repository_cs\\API_03_06_2023\\API_03_06_2023\\API_03_06_2023.csproj",
+      "projectUniqueName": "C:\\Users\\biela\\Documents\\Git\\repository_cs\\repository_cs\\API_03_06_2023\\API_03_06_2023\\API_03_06_2023.csproj",
       "projectName": "API_03_06_2023",
-      "projectPath": "D:\\repoCS\\repository_cs\\API_03_06_2023\\API_03_06_2023\\API_03_06_2023.csproj",
+      "projectPath": "C:\\Users\\biela\\Documents\\Git\\repository_cs\\repository_cs\\API_03_06_2023\\API_03_06_2023\\API_03_06_2023.csproj",
       "packagesPath": "C:\\Users\\biela\\.nuget\\packages\\",
-      "outputPath": "D:\\repoCS\\repository_cs\\API_03_06_2023\\API_03_06_2023\\obj\\",
+      "outputPath": "C:\\Users\\biela\\Documents\\Git\\repository_cs\\repository_cs\\API_03_06_2023\\API_03_06_2023\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\biela\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2628,6 +2628,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2686,7 +2687,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   },
